@@ -44,6 +44,21 @@ value (6,"Vivek");
 
 select last_name, first_name
 from employee
-where emp_id=6;
+where emp_id <4;
 
+select * from employee
+where hire_date is not null;
 
+SET SQL_SAFE_UPDATES = 0;
+
+update employee
+set hourly_pay = 25.50,
+ hire_date="2023-01-07"
+where emp_id = 6;
+select *from employee;
+
+delete from employee
+where emp_id=5;
+select * from employee;
+
+COMMIT;

@@ -65,8 +65,24 @@ from employee;
 select last_name, first_name
 from employee
 where emp_id=6
+//disable safe mode
+SET SQL_SAFE_UPDATES = 0;
 
 // where have null values
 select last_name, first_name
 from employee
 where emp_id=6
+
+delete from employee
+where emp_id=5;
+select * from employee
+
+SET AUTOCOMMIT = OFF; // ALL TARSECTION NOT SAVE AUTO
+commit  // SAVE DATA;
+// delete All data in table
+DELETE FROM employee;
+
+select * from employee;
+ROLLBACK
+
+select * from employee;
