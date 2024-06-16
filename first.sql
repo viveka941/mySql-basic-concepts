@@ -122,3 +122,45 @@ ADD CONSTRAINT chk_hourly_pay_10 CHECK(hourly_pay >= 10.00);
 
 ALTER TABLE employee
 ADD CONSTRAINT chk_hourly_pay_20 CHECK(hourly_pay >= 20.00);
+
+
+insert into products
+values(104,"straw",0.00),
+		(105,"nakin",0.99),
+        (106,"fork",0.00),
+        (107,"spoon",0.00);
+        
+        SET SQL_SAFE_UPDATES = 0;
+delete from products
+where product_id >= 104;
+
+ALTER TABLE products MODIFY price DECIMAL(10,2) NULL;
+
+INSERT INTO products (product_id, product_name)
+VALUES 
+    (104, 'straw'),
+    (105, 'napkin'),
+    (106, 'fork'),
+    (107, 'spoon');
+
+SELECT * FROM products;
+
+create table transactions(
+trns_id int,
+amount decimal (5,2),
+trans_data datetime default now()
+);
+
+-- Step 2: Insert five sample records into the transactions table
+INSERT INTO transactions (trns_id, amount)
+VALUES
+    (1, 100.50),
+    (2, 200.00),
+    (3, 150.75),
+    (4, 80.25),
+    (5, 250.00);
+
+-- Step 3: Verify the insertions
+SELECT * FROM transactions;
+
+
