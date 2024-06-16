@@ -56,3 +56,17 @@ value (1,"Eugene","Krabs",25.50, "2023-01-02"),
 
 insert into employee(emp_id,first_name)
 value (6,"Vivek");
+
+// sepcific column
+select last_name, first_name
+from employee;
+
+//search sepcific values
+select last_name, first_name
+from employee
+where emp_id=6
+
+// where have null values
+select last_name, first_name
+from employee
+where emp_id=6

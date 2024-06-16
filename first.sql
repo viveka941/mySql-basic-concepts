@@ -41,3 +41,9 @@ value
 
 insert into employee(emp_id,first_name)
 value (6,"Vivek");
+
+select last_name, first_name
+from employee
+where emp_id=6;
+
+
