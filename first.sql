@@ -178,3 +178,18 @@ select * from trans;
 insert into trans
 values(null,3.48);
 select * from trans;
+
+
+select amount from trans
+where trans_id = 1002;
+
+create table transaction(
+transaction_id int primary key auto_increment,
+amount decimal(5,2)
+);
+
+insert into transaction(amount)
+values(7.5);
+select * from transaction;
+alter table transaction 
+auto_increment = 100
