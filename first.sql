@@ -90,7 +90,15 @@ price decimal(4,2)
 ALTER TABLE products
 add constraint
 unique (product_name);
+
 select * from products;
+
+INSERT INTO products
+values (100,"hamburger",3.99),
+		(101,"fries",1.89),
+        (102,"sada",1.00),
+        (103,"ice cream",1.49);
+      
 
 
 
