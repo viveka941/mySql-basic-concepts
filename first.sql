@@ -17,3 +17,16 @@ drop table workers;
 
 alter table employee
 add phone_number varchar(15);
+
+alter table employee
+rename column  emali to email;
+
+alter table employee
+modify column email varchar(100);
+
+alter table employee
+modify email varchar(100) 
+after last_name;
+
+alter table employee
+drop column email;
