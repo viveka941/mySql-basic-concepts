@@ -107,3 +107,13 @@ unique (product_name);
 alter table products
 modify price decimal (4,2) not null;
 
+primary key
+create table trans(
+trans_id int primary key,
+amount  decimal(5,2)
+);
+
+alter table trans
+add constraint 
+primary key(amount); // give error because not allowed multiple primary key
+select * from trans;

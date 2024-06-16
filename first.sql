@@ -154,13 +154,27 @@ trans_data datetime default now()
 -- Step 2: Insert five sample records into the transactions table
 INSERT INTO transactions (trns_id, amount)
 VALUES
-    (1, 100.50),
-    (2, 200.00),
-    (3, 150.75),
-    (4, 80.25),
-    (5, 250.00);
+   
+    (6, 256.00);
 
 -- Step 3: Verify the insertions
 SELECT * FROM transactions;
 
 
+create table trans(
+trans_id int primary key,
+amount  decimal(5,2)
+);
+
+alter table trans
+add constraint 
+primary key(amount);
+
+
+insert into trans
+values(1002,3.48);
+select * from trans;
+
+insert into trans
+values(null,3.48);
+select * from trans;
