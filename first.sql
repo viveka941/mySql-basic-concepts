@@ -30,3 +30,14 @@ after last_name;
 
 alter table employee
 drop column email;
+
+insert into employee
+value 
+(1, 'Eugene', 'Krabs', 25.50, '2023-01-02'),
+(2, 'Sandy', 'Cheeks', 30.00, '2023-02-14'),
+(3, 'Squidward', 'Tentacles', 22.75, '2023-03-20'),
+(4, 'Patrick', 'Star', 18.00, '2023-04-25'),
+(5, 'SpongeBob', 'SquarePants', 20.50, '2023-05-30');
+
+insert into employee(emp_id,first_name)
+value (6,"Vivek");
