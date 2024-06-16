@@ -99,6 +99,26 @@ values (100,"hamburger",3.99),
         (102,"sada",1.00),
         (103,"ice cream",1.49);
       
+alter table products
+modify price decimal (4,2) not null;
+
+insert into products 
+values (104,"cookie",0);
+
+CREATE TABLE employee(
+emp_id int ,
+first_name varchar(20),
+last_name varchar(20),
+hourly_pay decimal(5,2),
+hire_date date,
+constraint chk_hourly_pay check (hourly_pay >=10.00)
+);
 
 
+select * from employee;
+-- Add the new constraints with different names
+ALTER TABLE employee
+ADD CONSTRAINT chk_hourly_pay_10 CHECK(hourly_pay >= 10.00);
 
+ALTER TABLE employee
+ADD CONSTRAINT chk_hourly_pay_20 CHECK(hourly_pay >= 20.00);
