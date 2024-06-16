@@ -61,4 +61,36 @@ delete from employee
 where emp_id=5;
 select * from employee;
 
+
+SET AUTOCOMMIT = OFF;
 COMMIT;
+DELETE FROM employee;
+select * from employee;
+
+rollback;
+
+CREATE TABLE TEST(
+my_date date,
+my_time time,
+my_datetime datetime
+);
+
+select * from test;
+
+insert into test values(current_date(), current_time(),now());
+insert into test values(current_date()+1, null,null); 
+
+
+create table products(
+product_id int,
+product_name varchar(25) unique,
+price decimal(4,2)
+);
+
+ALTER TABLE products
+add constraint
+unique (product_name);
+select * from products;
+
+
+

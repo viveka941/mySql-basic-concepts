@@ -86,3 +86,19 @@ select * from employee;
 ROLLBACK
 
 select * from employee;
+
+insert into test values(current_date(), current_time(),now()); // current_date
+
+insert into test values(current_date(), current_time(),now());
+insert into test values(current_date()+1, null,null); // the next day
+
+create table products(
+product_id int,
+product_name varchar(25) unique,
+price decimal(4,2)
+);
+
+//if you forget add to unique
+ALTER TABLE products
+add constraint
+unique (product_name);
