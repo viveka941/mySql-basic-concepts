@@ -1,0 +1,35 @@
+Sql -> 
+Sql - structure query language
+sql use to be
+create , reetrive upadete delete  form database
+if you can manullay track all trasnsaction would be a lot of extrea work if we had database we could keep records electronically and ourselves a lof of trouble right there's two types of database 
+1. Relational database there has -> row and column
+2. non-Relational database organized in any format but a table this could Json files key values pairs grapth data structure entitiy 
+
+many have sql application ->mysql,PostgresSQL,MicrosofthSQL
+
+there is no require uppercase and lowercase
+what is database
+create database -> create database myDB;
+use myDB;
+
+ALTER DATABASE myDB READ ONLY = 1;
+DROP myDB
+
+CREATE TABLE employee(
+emp_id int ,
+first_name varchar(20),
+last_name varchar(20),
+hourly_pay decimal(5,2),
+hire_date date
+)
+
+select * from employee;
+rename table employee to workers;
+
+
+alter table employee
+add phone_number varchar(15); 
+
+alter table employee
+rename column phone_number to emali
