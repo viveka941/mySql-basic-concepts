@@ -192,4 +192,43 @@ insert into transaction(amount)
 values(7.5);
 select * from transaction;
 alter table transaction 
-auto_increment = 100
+auto_increment = 100;
+
+create table customers(
+customer_id int primary key auto_increment,
+first_name varchar(20),
+last_name varchar(20)
+);
+
+insert into customers (first_name,last_name)
+values("fred","fisht"),
+		("larry","Lboster"),
+        ("Bubble","Bass");
+select * from customers;
+
+drop table transactions;
+
+create table transactions(
+transaction_id int primary key auto_increment,
+amount decimal(5,2),
+customer_id int,
+foreign key(customer_id) references customers(customer_id)
+);
+
+select * from transactions;
+
+alter table transactions
+drop Foreign key transactions_ibfk_1 ;
+
+alter table transactions
+add constraint fk_customer_id
+foreign key (customer_id) references customers(customer_id);
+
+insert into transactions (amount, customer_id)
+values (1.00 , null);
+select * from transactions;
+
+select * from customers;
+
+select * from transactions right join customers
+on transactions.customer_id = customers.customer_id;

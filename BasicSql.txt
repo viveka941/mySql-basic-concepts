@@ -119,10 +119,27 @@ primary key(amount); // give error because not allowed multiple primary key
 select * from trans;
 
 
-create table transaction(
+create table transactions(
 transaction_id int primary key auto_increment,
 amount decimal(5,2)
 );
 
-alter table transaction 
+alter table transactions
 auto_increment = 100 // start id with 100;
+
+Foreign  key
+link between two table 
+
+drop table transactions
+
+alter table transactions
+drop Foreign key transactions_ibfk_1 // if drop Foreign key 
+
+
+join  -> combine two table with Foreign key
+select * from transactions inner join customers
+on transactions.customer_id = customers.customer_id;
+
+left join 
+select * from transactions left join customers
+on transactions.customer_id = customers.customer_id;
